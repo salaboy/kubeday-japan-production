@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       annotations:
-        autoscaling.knative.dev/min-scale: "3"    
+        autoscaling.knative.dev/min-scale: "2"    
     spec:
       containerConcurrency: 0
       containers:
@@ -15,13 +15,7 @@ spec:
         - name: BUILT
           value: 20220924T112015
         - name: REDIS_HOST
-          value: my-redis-master:6379
-        - name: REDIS_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              key: redis-password
-              name: my-redis
-              optional: false
+          value: 10.180.243.245:6379
         image: salaboy/app-c863bf8a26a07de0524697b6de429c8c@sha256:98599e75177382c18fbb179745d1f917ded871ed09be1cc415e8c37209be4c3d
         livenessProbe:
           httpGet:
