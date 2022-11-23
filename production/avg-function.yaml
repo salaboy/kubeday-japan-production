@@ -1,28 +1,16 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  annotations:
-    serving.knative.dev/creator: msalatino@vmware.com
-    serving.knative.dev/lastModifier: msalatino@vmware.com
-  creationTimestamp: "2022-11-23T08:30:32Z"
-  generation: 1
   labels:
-    boson.dev/function: "true"
-    boson.dev/runtime: go
     function.knative.dev: "true"
     function.knative.dev/name: avg
     function.knative.dev/runtime: go
   name: avg
-  namespace: default
-  resourceVersion: "2147414"
-  uid: 2e7a6bea-17b7-4811-b95c-f2192ae79d4d
+  namespace: production
 spec:
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        boson.dev/function: "true"
-        boson.dev/runtime: go
         function.knative.dev: "true"
         function.knative.dev/name: avg
         function.knative.dev/runtime: go
